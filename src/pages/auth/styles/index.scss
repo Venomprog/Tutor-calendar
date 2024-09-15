@@ -1,0 +1,42 @@
+.auth-page{
+  &__inner{
+    padding: 150px 20px 40px;
+  }
+
+  &__title{
+    text-align: center;
+  }
+
+  &__form{
+    margin-top: 60px;
+
+    &-input{
+      margin-top: 10px;
+      display: block;
+      padding: 8px 12px;
+
+      width: 100%;
+
+      border: 2px solid lightblue;
+      font-size: 16px;
+      line-height: 100%;
+      border-radius: 8px;
+
+      &:first-child{
+        margin-top: 0px;
+      }
+    }
+
+    &-button{
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    &-error{
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 100%;
+      color: red;
+    }
+  }
+}

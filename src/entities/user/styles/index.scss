@@ -1,0 +1,16 @@
+.user-header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__logo{
+    width: 24px;
+    height: 24px;
+  }
+
+  &__email{
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,22 @@
+.header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 16px 20px;
+
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+
+  &-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logout{
+      font-size: 14px;
+      line-height: 100%;
+      color: #F54646;
+    }
+  }
+}
