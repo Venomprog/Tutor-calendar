@@ -3,6 +3,8 @@ import '../styles/index.scss'
 import { MainButton } from "src/shared/buttons/ui/Buttons"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
+import { fetchUserData, userAuthCompleted } from "src/entities/user/model/userSlice"
+import { useAppDispatch } from "src/app/store"
 
 type Inputs = {
   emailRequired: string
@@ -12,6 +14,7 @@ type Inputs = {
 const AuthPage = () => {
 
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   const {
     register,
@@ -21,7 +24,9 @@ const AuthPage = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) =>{
 
     if (data.emailRequired === 'username@mail.ru' && data.passwordRequired === 'test'){
-      navigate('../calendar')
+      dispatch(userAuthCompleted())
+      dispatch(fetchUserData())
+      navigate('../students')
     } else {
       console.log('wrong data')
     }

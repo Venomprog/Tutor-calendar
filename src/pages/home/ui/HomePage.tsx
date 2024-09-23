@@ -11,7 +11,7 @@ export const HomePage: FC = () => {
     if (!isLogined) {
       navigate('auth')
     } else {
-      navigate('calendar')
+      navigate('students')
     }
   }, [isLogined])
 

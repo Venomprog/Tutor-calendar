@@ -6,6 +6,7 @@ import Header from '../widgets/Header/ui/Header';
 import { Provider } from 'react-redux';
 import {store} from './store';
 import AuthPage from 'src/pages/auth/ui/AuthPage';
+import StudentsPage from 'src/pages/students/ui/StudentsPage';
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
             </Route>
             <Route path='calendar' element={<CalendaerPage/>}></Route>
             <Route path='auth' element={<AuthPage/>}></Route>
+            <Route path='students' element={<StudentsPage/>}></Route>
           </Routes>
         </Router>
       </div>
