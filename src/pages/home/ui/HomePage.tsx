@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 import { useAppSelector } from "src/app/store";
 
 export const HomePage: FC = () => {
@@ -17,6 +17,7 @@ export const HomePage: FC = () => {
 
   return (
     <>
+      <Outlet />
     </>
   )
 }

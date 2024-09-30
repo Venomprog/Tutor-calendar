@@ -15,8 +15,8 @@ const initialStore: IStudentsInitialProps = {
 export const fetchStudentsData = createAsyncThunk(
   'students/fetchStudentsData',
   async () => {
-    const response = await axios.get("http://localhost:3001/user/students")
-    return response.data
+    const response = await axios.get("http://localhost:3001/user")
+    return response.data.students
   },
 )
 

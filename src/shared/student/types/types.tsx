@@ -6,8 +6,8 @@ export interface IStudentLesson {
 
 export interface IStudent {
   name: string
-  class: string
-  price: string
+  studentClass: string
+  price?: string
   subjects: string[]
-  lessons: IStudentLesson[]
+  lessons?: IStudentLesson[]
 }
