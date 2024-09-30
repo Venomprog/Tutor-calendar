@@ -20,7 +20,7 @@ const initialStore: IUserSliceInitialState = {
   students: []
 }
 
-export const counterSlice = createSlice({
+export const userSlice = createSlice({
   name: 'user',
   initialState: initialStore,
   reducers: {
@@ -52,8 +52,8 @@ export const counterSlice = createSlice({
 export const { 
   userAuthStart,
   userAuthCompleted,
-  } = counterSlice.actions
+  } = userSlice.actions
 
 
 
-export default counterSlice.reducer
+export default userSlice.reducer

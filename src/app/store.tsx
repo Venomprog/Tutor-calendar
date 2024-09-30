@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import userReducer from '../entities/user/model/userSlice'
+import studentsReducer from '../entities/student/model/studentsSlice'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 
 export const store = configureStore({
   reducer: {
-    user : userReducer
+    user : userReducer,
+    students: studentsReducer 
   }
 })
 

@@ -1,0 +1,82 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:string';
+$fs: 16px;
+
+html {
+  @media (min-width: 320px) {
+    font-size: getVw($fs, 340px / 100);
+  }
+
+  @each $breakpoint in (375px, 576px, 768px, 1024px) {
+    @media (min-width: #{$breakpoint}) {
+      font-size: getVw($fs, $breakpoint / 100);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    font-size: getVw($fs, 1920px / 100);
+  }
+
+  @media (min-width: 1920px) {
+    font-size: getVw($fs, 1920px / 100);
+  }
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+$breakpoints: (
+  xxl: 1920px,
+  xl: 1680px,
+  ll: 1440px,
+  l: 1366px,
+  d: 1280px,
+  t: 1024px,
+  m: 768px,
+  s: 576px,
+  xs: 375px,
+  xxs: 320px,
+);
+
+@function breakpoint($variant: d) {
+  @return map.get($breakpoints, $variant);
+}
+
+@function media($direction: '>', $variant: d) {
+  @if $direction == '>' {
+    @return '(min-width: #{breakpoint($variant)})';
+  } @else if $direction == '<' {
+    @return '(max-width: #{breakpoint($variant) - 1px})';
+  } @else if $direction == '<=' {
+    @return '(max-width: #{breakpoint($variant)})';
+  } @else if $direction == 'mt' {
+    @return '(min-width: #{breakpoint(m)}) and (max-width: #{breakpoint(t) - 1px})';
+  } @else if $direction == 'td' {
+    @return '(min-width: #{breakpoint(t)}) and (max-width: #{breakpoint(d) - 1px})';
+  } @else if $direction == 'md' {
+    @return '(min-width: #{breakpoint(m)}) and (max-width: #{breakpoint(d) - 1px})';
+  }
+}
+@function rem($size) {
+  @return math.div($size, $fs) * 1rem;
+}
+
+@function getVw($px, $width) {
+  @return $px / $width * 1vw;
+}
+
+$transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+$transition-duration: 0.5s;
+$transition: $transition-duration $transition-timing-function;
+
+
+
+//container styles
+
+.page-container{
+  padding: rem(100px) 0px rem(50px);
+}
+
+.container{
+  padding: 0px rem(20px);
+}

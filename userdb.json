@@ -5,6 +5,7 @@
         "students": [
             {
                 "name": "Ivan Ivanov",
+                "id": "1",
                 "class": "8",
                 "price": "750$",
                 "subjects": [
@@ -31,6 +32,7 @@
             },
             {
                 "name": "Egor Batya",
+                "id": "2",
                 "class": "11",
                 "price": "250$",
                 "subjects": [
