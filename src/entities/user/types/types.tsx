@@ -1,4 +1,4 @@
-import { IStudent } from "src/shared/student/types/types"
+import { IStudent } from "src/entities/student/types/types"
 
 export interface IUserSliceInitialState {
   name: string

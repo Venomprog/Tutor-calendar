@@ -11,7 +11,6 @@ const StudentsPage = () => {
   const students = useAppSelector(state => state.students.students)
   const dispatch = useAppDispatch()
 
-  console.log(students)
 
   useEffect(() => {
     dispatch(fetchStudentsData())
@@ -24,10 +23,11 @@ const StudentsPage = () => {
         <div className="students-page__list">
           {students && students.map(item => {
             return (
-              <Link to="./students" key={item.id}>
+              <Link to={`/students/${item.id}`} key={item.id}>
                 <StudentCard
+                  id={item.id}
                   name={item.name}
-                  studentClass={item.class}
+                  studentClass={item.student_class}
                   subjects={item.subjects}
                 />
               </Link>

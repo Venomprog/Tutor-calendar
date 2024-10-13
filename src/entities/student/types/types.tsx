@@ -4,7 +4,7 @@ import { TSubject } from "src/shared/subject/types/types"
 export interface IStudent {
   name: string
   id: number
-  class: 'string'
+  student_class: string
   price: string
   subjects: TSubject[]
   lessons: ILesson[]

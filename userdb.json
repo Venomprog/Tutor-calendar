@@ -5,8 +5,8 @@
         "students": [
             {
                 "name": "Ivan Ivanov",
-                "id": "1",
-                "class": "8",
+                "id": 1,
+                "student_class": "8 Класс",
                 "price": "750$",
                 "subjects": [
                         "История",
@@ -32,8 +32,8 @@
             },
             {
                 "name": "Egor Batya",
-                "id": "2",
-                "class": "11",
+                "id": 2,
+                "student_class": "11 Класс",
                 "price": "250$",
                 "subjects": [
                         "История"

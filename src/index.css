@@ -11,3 +11,12 @@ body {
 code {
   font-family: "Montserrat", sans-serif;
 }
+
+
+.red-text{
+  color: #FF0000;
+}
+
+.bold-text{
+  font-weight: 600;
+}

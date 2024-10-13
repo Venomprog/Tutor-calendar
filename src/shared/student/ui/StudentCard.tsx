@@ -1,8 +1,9 @@
 import { FC } from "react"
-import { IStudent } from "../types/types"
+import { IStudentCard } from "../types/types"
+import '../styles/index.scss'
 
 
-export const StudentCard: FC<IStudent> = ({name, subjects, studentClass}) => {
+export const StudentCard: FC<IStudentCard> = ({name, subjects, studentClass}) => {
 
 
     return (

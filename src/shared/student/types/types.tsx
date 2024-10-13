@@ -4,9 +4,10 @@ export interface IStudentLesson {
   subject: string
 }
 
-export interface IStudent {
+export interface IStudentCard {
   name: string
   studentClass: string
+  id: number
   price?: string
   subjects: string[]
   lessons?: IStudentLesson[]
