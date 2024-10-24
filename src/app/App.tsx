@@ -8,6 +8,7 @@ import {store} from './store';
 import AuthPage from 'src/pages/auth/ui/AuthPage';
 import StudentsPage from 'src/pages/students/ui/StudentsPage';
 import StudentProfilePage from 'src/pages/studentProfile/ui/StudentProfile';
+import { Navbar } from 'src/widgets/Navbar/ui/Navbar';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
               <Route path='students/:studentId' element={<StudentProfilePage/>}></Route>
             </Route>
           </Routes>
+          <Navbar/>
         </Router>
       </div>
     </Provider>

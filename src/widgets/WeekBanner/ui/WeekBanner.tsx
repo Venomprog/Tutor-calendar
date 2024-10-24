@@ -9,36 +9,44 @@ const WeekBanner: FC<IWeekBanner> = ({days, title}) => {
     interface IWeekDayItem {
         day: string
         isLessonDay: boolean
+        title?: string
     }
 
     let weekDays: IWeekDayItem[] = [
         {
             day: 'Понедельник',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'ПН'
         },
         {
             day: 'Вторник',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'ВТ'
         },
         {
             day: 'Среда',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'СР'
         },
         {
             day: 'Четверг',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'ЧТ'
         },
         {
             day: 'Пятница',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'ПТ'
         },
         {
             day: 'Суббота',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'СБ'
         },
         {
             day: 'Воскресенье',
-            isLessonDay: false
+            isLessonDay: false,
+            title: 'ВС'
         },
     ]
 
@@ -64,7 +72,7 @@ const WeekBanner: FC<IWeekBanner> = ({days, title}) => {
                     return (
                         <div className="week-banner__days-item week-banner__day" key={index}>
                             <p className="week-banner__day-title">
-                                {item.day.slice(0, 2).toUpperCase()}
+                                {item?.title}
                             </p>
                             <div className={`week-banner__day-status ${item.isLessonDay ? 'active' : ''}`}>
 

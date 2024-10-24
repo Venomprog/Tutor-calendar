@@ -59,9 +59,9 @@ export const StudentProfilePage = () => {
                     <WeekBanner title="Дни занятий" days={lessonsDays} />
                 </div>
                 <div className="student-profile__days">
-                    {student?.lessons.map(item => {
+                    {student?.lessons.map((item, index) => {
                         return (
-                            <div className="student-profile__day">
+                            <div className="student-profile__day" key={index}>
                                 <div className="student-profile__day-day">{item.day}</div>
                                 <div className="student-profile__day-row">
                                     <div className="student-profile__day-lessons">Занятия:</div>
